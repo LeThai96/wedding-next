@@ -2,15 +2,18 @@
 
 import { useState } from 'react';
 import { LanguageSelector } from './LanguageSelector';
+import { useWeddingStore } from '@/store/useWeddingStore';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const { config } = useWeddingStore();
+  const { translations } = config;
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Our Story', href: '#story' },
-    { label: 'Details', href: '#details' },
-    { label: 'RSVP', href: '#rsvp' },
+    { label: translations.navigation.home, href: '#home' },
+    { label: translations.navigation.ourStory, href: '#story' },
+    { label: translations.navigation.details, href: '#details' },
+    { label: translations.navigation.rsvp, href: '#rsvp' },
   ];
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -23,12 +26,12 @@ export function Navigation() {
   };
 
   return (
-    <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-sm">
+    <nav className="fixed w-full z-50 bg-background/80 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <a href="#home" onClick={(e) => handleScroll(e, '#home')} className="text-xl font-playfair text-primary">
-              S & J
+              T & L
             </a>
           </div>
           
@@ -40,7 +43,7 @@ export function Navigation() {
                   key={item.href}
                   href={item.href}
                   onClick={(e) => handleScroll(e, item.href)}
-                  className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                  className="text-muted-foreground hover:text-foreground px-3 py-2 text-sm font-medium transition-colors duration-200"
                 >
                   {item.label}
                 </a>
@@ -53,7 +56,7 @@ export function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-muted-foreground hover:text-foreground focus:outline-none"
             >
               <span className="sr-only">Open main menu</span>
               {!isOpen ? (
@@ -73,13 +76,13 @@ export function Navigation() {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={(e) => handleScroll(e, item.href)}
-                className="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium"
+                className="text-muted-foreground hover:text-foreground block px-3 py-2 text-base font-medium"
               >
                 {item.label}
               </a>

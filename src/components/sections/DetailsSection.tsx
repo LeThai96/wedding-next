@@ -1,44 +1,48 @@
-import { getWeddingConfig } from "@/utils/config";
+'use client';
 
-export async function DetailsSection() {
-  const { schedule, event, details } = await getWeddingConfig();
+import { useWeddingStore } from '@/store/useWeddingStore';
+
+export function DetailsSection() {
+  const { config } = useWeddingStore();
+  const { schedule, event, details, translations } = config;
 
   return (
-    <section id="details" className="section-padding bg-white">
+    <section id="details" className="section-padding bg-background">
       <div className="container-padding max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-playfair text-center mb-16 text-primary">Wedding Details</h2>
+        <h2 className="text-3xl md:text-4xl font-playfair text-center mb-16 text-foreground">
+          {translations.details.title}
+        </h2>
         
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-8">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-playfair mb-4 text-primary">Ceremony & Reception</h3>
-              <p className="text-gray-600">{schedule.ceremony} - Ceremony</p>
-              <p className="text-gray-600">{schedule.cocktailHour} - Cocktail Hour</p>
-              <p className="text-gray-600">{schedule.reception} - Reception</p>
+            <div className="bg-card p-6 rounded-lg">
+              <h3 className="text-xl font-playfair mb-4 text-foreground">{translations.details.ceremonyTitle}</h3>
+              <p className="text-muted-foreground">{schedule.ceremony} - {translations.details.ceremonyLabel}</p>
+              <p className="text-muted-foreground">{schedule.cocktailHour} - {translations.details.cocktailHourLabel}</p>
+              <p className="text-muted-foreground">{schedule.reception} - {translations.details.receptionLabel}</p>
             </div>
             
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-playfair mb-4 text-primary">Venue</h3>
-              <p className="text-gray-600">{event.venue.name}</p>
-              <p className="text-gray-600">{event.venue.address}</p>
-              <p className="text-gray-600">{event.venue.city}, {event.venue.state} {event.venue.zipCode}</p>
+            <div className="bg-card p-6 rounded-lg">
+              <h3 className="text-xl font-playfair mb-4 text-foreground">{translations.details.venueTitle}</h3>
+              <p className="text-muted-foreground">{event.venue.name}</p>
+              <p className="text-muted-foreground">{event.venue.address}</p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-playfair mb-4 text-primary">Dress Code</h3>
-              <p className="text-gray-600">{details.dressCode}</p>
+            <div className="bg-card p-6 rounded-lg">
+              <h3 className="text-xl font-playfair mb-4 text-foreground">{translations.details.dressCodeTitle}</h3>
+              <p className="text-muted-foreground">{details.dressCode}</p>
             </div>
           </div>
 
           <div className="space-y-8">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-playfair mb-4 text-primary">Accommodations</h3>
-              <p className="text-gray-600">{details.accommodation.text}</p>
+            <div className="bg-card p-6 rounded-lg">
+              <h3 className="text-xl font-playfair mb-4 text-foreground">{translations.details.accommodationsTitle}</h3>
+              <p className="text-muted-foreground">{details.accommodation.text}</p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-playfair mb-4 text-primary">Parking</h3>
-              <p className="text-gray-600">{details.parking.text}</p>
+            <div className="bg-card p-6 rounded-lg">
+              <h3 className="text-xl font-playfair mb-4 text-foreground">{translations.details.parkingTitle}</h3>
+              <p className="text-muted-foreground">{details.parking.text}</p>
             </div>
           </div>
         </div>

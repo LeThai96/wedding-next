@@ -1,8 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import { useWeddingStore } from '@/store/useWeddingStore';
 
 export function RSVPSection() {
+  const { config } = useWeddingStore();
+  const { translations } = config;
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,14 +29,16 @@ export function RSVPSection() {
   };
 
   return (
-    <section id="rsvp" className="section-padding bg-gray-50">
+    <section id="rsvp" className="section-padding bg-muted">
       <div className="container-padding max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-playfair text-center mb-16 text-primary">RSVP</h2>
+        <h2 className="text-3xl md:text-4xl font-playfair text-center mb-16 text-primary">
+          {translations.navigation.rsvp}
+        </h2>
         
         <form onSubmit={handleSubmit} className="space-y-8">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1">
                 Full Name
               </label>
               <input
@@ -43,12 +48,12 @@ export function RSVPSection() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                className="w-full px-4 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring focus:border-ring"
               />
             </div>
             
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1">
                 Email
               </label>
               <input
@@ -58,13 +63,13 @@ export function RSVPSection() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                className="w-full px-4 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring focus:border-ring"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-foreground mb-1">
               Will you be attending?
             </label>
             <div className="space-x-4">
@@ -77,7 +82,7 @@ export function RSVPSection() {
                   onChange={handleChange}
                   className="form-radio text-primary"
                 />
-                <span className="ml-2">Yes, I will attend</span>
+                <span className="ml-2 text-foreground">Yes, I will attend</span>
               </label>
               <label className="inline-flex items-center">
                 <input
@@ -88,14 +93,14 @@ export function RSVPSection() {
                   onChange={handleChange}
                   className="form-radio text-primary"
                 />
-                <span className="ml-2">No, I cannot attend</span>
+                <span className="ml-2 text-foreground">No, I cannot attend</span>
               </label>
             </div>
           </div>
 
           {formData.attending === 'yes' && (
             <div>
-              <label htmlFor="guests" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="guests" className="block text-sm font-medium text-foreground mb-1">
                 Number of Guests
               </label>
               <select
@@ -103,7 +108,7 @@ export function RSVPSection() {
                 name="guests"
                 value={formData.guests}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                className="w-full px-4 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring focus:border-ring"
               >
                 {[1, 2, 3, 4, 5].map(num => (
                   <option key={num} value={num}>
@@ -115,7 +120,7 @@ export function RSVPSection() {
           )}
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1">
               Message (Optional)
             </label>
             <textarea
@@ -124,7 +129,7 @@ export function RSVPSection() {
               value={formData.message}
               onChange={handleChange}
               rows={4}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+              className="w-full px-4 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring focus:border-ring"
               placeholder="Leave a message for the happy couple..."
             />
           </div>
@@ -132,7 +137,7 @@ export function RSVPSection() {
           <div className="text-center">
             <button
               type="submit"
-              className="px-8 py-3 bg-primary text-white rounded-full hover:bg-primary-dark transition-colors duration-300"
+              className="px-8 py-3 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors duration-300"
             >
               Send RSVP
             </button>

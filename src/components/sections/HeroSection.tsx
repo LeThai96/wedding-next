@@ -1,12 +1,16 @@
-import Image from "next/image";
-import { getWeddingConfig } from "@/utils/config";
+'use client';
 
-export async function HeroSection() {
-  const config = await getWeddingConfig();
-  const { couple, event } = config;
+import Image from "next/image";
+import { LanguageSelector } from "@/components/LanguageSelector";
+import { useWeddingStore } from '@/store/useWeddingStore';
+
+export function HeroSection() {
+  const { config } = useWeddingStore();
+  const { couple, event, translations } = config;
 
   return (
     <section id="home" className="relative w-full h-screen flex items-center justify-center">
+      <LanguageSelector />
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/40 z-10" />
         <Image
@@ -22,22 +26,21 @@ export async function HeroSection() {
         <h1 className="text-5xl md:text-7xl font-playfair tracking-wide">
           {couple.person1} & {couple.person2}
         </h1>
-        <p className="text-xl md:text-2xl font-light font-parisienne">
-          Are getting married
+        <p className="text-xl md:text-2xl font-light">
+          {translations.hero.gettingMarried}
         </p>
         <div className="text-lg md:text-xl font-light space-y-2">
           <p>Saturday, {new Date(event.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
           <p>{event.time}</p>
           <p className="mt-4">{event.venue.name}</p>
           <p>{event.venue.address}</p>
-          <p>{event.venue.city}, {event.venue.state} {event.venue.zipCode}</p>
         </div>
         <div className="pt-8">
           <a 
             href="#rsvp"
             className="inline-block px-8 py-3 border-2 border-white rounded-full hover:bg-white hover:text-black transition-colors duration-300"
           >
-            RSVP Now
+            {translations.hero.rsvpButton}
           </a>
         </div>
       </div>

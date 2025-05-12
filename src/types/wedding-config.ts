@@ -9,9 +9,6 @@ export interface WeddingConfig {
     venue: {
       name: string;
       address: string;
-      city: string;
-      state: string;
-      zipCode: string;
     };
   };
   schedule: {
@@ -32,10 +29,44 @@ export interface WeddingConfig {
   images: {
     hero: string;
   };
+  translations: {
+    navigation: {
+      home: string;
+      ourStory: string;
+      details: string;
+      rsvp: string;
+    };
+    hero: {
+      gettingMarried: string;
+      rsvpButton: string;
+    };
+    countdown: {
+      title: string;
+      days: string;
+      hours: string;
+      minutes: string;
+      seconds: string;
+    };
+    story: {
+      title: string;
+    };
+    details: {
+      title: string;
+      ceremonyTitle: string;
+      ceremonyLabel: string;
+      cocktailHourLabel: string;
+      receptionLabel: string;
+      venueTitle: string;
+      dressCodeTitle: string;
+      accommodationsTitle: string;
+      parkingTitle: string;
+    };
+  };
 }
 
 interface StorySection {
   title: string;
+  time: string;
   description: string;
   image: string;
 } 

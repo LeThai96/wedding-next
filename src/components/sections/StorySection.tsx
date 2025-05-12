@@ -1,13 +1,18 @@
-import Image from "next/image";
-import { getWeddingConfig } from "@/utils/config";
+'use client';
 
-export async function StorySection() {
-  const { story } = await getWeddingConfig();
+import Image from "next/image";
+import { useWeddingStore } from '@/store/useWeddingStore';
+
+export function StorySection() {
+  const { config } = useWeddingStore();
+  const { story, translations } = config;
 
   return (
-    <section id="story" className="section-padding bg-gray-50">
+    <section id="story" className="section-padding bg-muted">
       <div className="container-padding max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-playfair text-center mb-16 text-primary">Our Story</h2>
+        <h2 className="text-3xl md:text-4xl font-playfair text-center mb-16 text-foreground">
+          {translations.story.title}
+        </h2>
         <div className="space-y-24">
           {story.map((section, index) => (
             <div 
@@ -23,8 +28,8 @@ export async function StorySection() {
                 />
               </div>
               <div className={`space-y-4 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                <h3 className="text-2xl font-playfair text-primary">{section.title}</h3>
-                <p className="text-gray-600">{section.description}</p>
+                <h3 className="text-2xl font-playfair text-foreground">{section.title}</h3>
+                <p className="text-muted-foreground">{section.description}</p>
               </div>
             </div>
           ))}

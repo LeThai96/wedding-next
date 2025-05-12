@@ -4,9 +4,15 @@ import { useEffect, useState } from 'react';
 
 interface CountdownProps {
   targetDate: Date;
+  labels: {
+    days: string;
+    hours: string;
+    minutes: string;
+    seconds: string;
+  };
 }
 
-export function Countdown({ targetDate }: CountdownProps) {
+export function Countdown({ targetDate, labels }: CountdownProps) {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -33,20 +39,20 @@ export function Countdown({ targetDate }: CountdownProps) {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
       <div className="text-center">
-        <div className="text-4xl md:text-6xl font-light">{timeLeft.days}</div>
-        <div className="text-gray-600 mt-2">Days</div>
+        <div className="text-4xl md:text-6xl font-light text-foreground">{timeLeft.days}</div>
+        <div className="text-muted-foreground mt-2">{labels.days}</div>
       </div>
       <div className="text-center">
-        <div className="text-4xl md:text-6xl font-light">{timeLeft.hours}</div>
-        <div className="text-gray-600 mt-2">Hours</div>
+        <div className="text-4xl md:text-6xl font-light text-foreground">{timeLeft.hours}</div>
+        <div className="text-muted-foreground mt-2">{labels.hours}</div>
       </div>
       <div className="text-center">
-        <div className="text-4xl md:text-6xl font-light">{timeLeft.minutes}</div>
-        <div className="text-gray-600 mt-2">Minutes</div>
+        <div className="text-4xl md:text-6xl font-light text-foreground">{timeLeft.minutes}</div>
+        <div className="text-muted-foreground mt-2">{labels.minutes}</div>
       </div>
       <div className="text-center">
-        <div className="text-4xl md:text-6xl font-light">{timeLeft.seconds}</div>
-        <div className="text-gray-600 mt-2">Seconds</div>
+        <div className="text-4xl md:text-6xl font-light text-foreground">{timeLeft.seconds}</div>
+        <div className="text-muted-foreground mt-2">{labels.seconds}</div>
       </div>
     </div>
   );
