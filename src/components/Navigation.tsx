@@ -13,6 +13,7 @@ export function Navigation() {
     { label: translations.navigation.home, href: '#home' },
     { label: translations.navigation.ourStory, href: '#story' },
     { label: translations.navigation.details, href: '#details' },
+    { label: translations.navigation.gallery, href: '#gallery' },
     { label: translations.navigation.rsvp, href: '#rsvp' },
   ];
 

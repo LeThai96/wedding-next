@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { LanguageSelector } from "@/components/LanguageSelector";
 import { useWeddingStore } from '@/store/useWeddingStore';
+import imageConfig from '@/config/image-config.json';
 
 export function HeroSection() {
   const { config } = useWeddingStore();
@@ -10,22 +11,34 @@ export function HeroSection() {
 
   return (
     <section id="home" className="relative w-full h-screen flex items-center justify-center">
-      <LanguageSelector />
+      <div className="absolute top-4 right-4 z-30">
+        <LanguageSelector />
+      </div>
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/40 z-10" />
+        <div className="absolute inset-0 bg-black/50 z-10" />
         <Image
-          src={config.images.hero}
+          src={imageConfig.heroMobile}
           alt="Wedding background"
           fill
-          className="object-cover"
+          className="object-cover md:hidden"
+          priority
+        />
+        <Image
+          src={imageConfig.hero}
+          alt="Wedding background"
+          fill
+          className="object-cover hidden md:block"
           priority
         />
       </div>
       
       <div className="relative z-20 text-center text-white space-y-6 px-4 max-w-3xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-playfair tracking-wide">
-          {couple.person1} & {couple.person2}
+          <span className="block md:inline">{couple.person1}</span>
+          <span className="block md:inline">{" & "}</span>
+          <span className="block md:inline">{couple.person2}</span>
         </h1>
+        <span className="block md:hidden h-30"></span>
         <p className="text-xl md:text-2xl font-light">
           {translations.hero.gettingMarried}
         </p>

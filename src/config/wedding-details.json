@@ -21,38 +21,99 @@
       "title": "How We Met",
       "time": "",
       "description": "We met at a local coffee shop through mutual friends. It was love at first sight!",
-      "image": "/story/meeting.jpg"
+      "imagesPath": "/story/00-before-we-met"
     },
     {
-      "title": "Our 1st picture",
-      "time": "",
-      "description": "We met at a local coffee shop through mutual friends. It was love at first sight!",
-      "image": "/story/1st-pic.png"
-    },
-    {
-      "title": "The Proposal",
+      "title": "First trip with the matchmakers in Da Lat",
       "time": "",
       "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
-      "image": "/story/proposal.jpg"
+      "imagesPath": "/story/01-first-trip-with-matchmaker"
+    },
+    {
+      "title": "Our relationship started",
+      "time": "",
+      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "imagesPath": "/story/02-her-25th-birthday-starts-relationship"
+    },
+    {
+      "title": "Going out together",
+      "time": "",
+      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "imagesPath": "/story/03-go-out-together"
+    },
+    {
+      "title": "Christmas",
+      "time": "",
+      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "imagesPath": "/story/04-christmas"
+    },
+    {
+      "title": "Tet 2024",
+      "time": "",
+      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "imagesPath": "/story/05-first-tet-2024"
+    },
+    {
+      "title": "First private trip",
+      "time": "",
+      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "imagesPath": "/story/06-first-private-trip"
+    },
+    {
+      "title": "Our family moments",
+      "time": "",
+      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "imagesPath": "/story/07-family-moments"
+    },
+    {
+      "title": "Our birthdays",
+      "time": "",
+      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "imagesPath": "/story/08-my-birthday"
+    },
+    {
+      "title": "Going out, a lot",
+      "time": "",
+      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "imagesPath": "/story/09-going-out"
+    },
+    {
+      "title": "Tet 2025",
+      "time": "",
+      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "imagesPath": "/story/11-tet-2025"
+    },
+    {
+      "title": "Thailand trip",
+      "time": "",
+      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "imagesPath": "/story/12-thailand-trip"
+    },
+    {
+      "title": "And then I proposed her",
+      "time": "",
+      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "imagesPath": "/story/13-proposal"
+    },
+    {
+      "title": "Our Best wedding moments",
+      "time": "",
+      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "imagesPath": "/story/14-wedding"
     }
   ],
   "details": {
     "dressCode": "Formal Attire",
-    "accommodation": {
-      "text": "We have reserved a block of rooms at the Grand Plaza Hotel. Please mention \"Sarah and John's Wedding\" when booking."
-    },
     "parking": {
       "text": "Complimentary valet parking is available at the venue."
     }
-  },
-  "images": {
-    "hero": "/hero-bg.jpg"
   },
   "translations": {
     "navigation": {
       "home": "Home",
       "ourStory": "Our Story",
       "details": "Details",
+      "gallery": "Gallery",
       "rsvp": "RSVP"
     },
     "hero": {
@@ -77,8 +138,10 @@
       "receptionLabel": "Reception",
       "venueTitle": "Venue",
       "dressCodeTitle": "Dress Code",
-      "accommodationsTitle": "Accommodations",
       "parkingTitle": "Parking"
+    },
+    "gallery": {
+      "title": "Our Gallery"
     },
     "metadata": {
       "title": "Thai & Ly's Wedding",

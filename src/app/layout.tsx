@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Playfair_Display, Shantell_Sans } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import defaultConfig from '@/config/wedding-details.json';
 import { SnowfallEffect } from '@/components/SnowfallEffect';
 
-const inter = Inter({ 
+const shantellSans = Shantell_Sans({ 
   subsets: ["latin"],
-  variable: '--font-inter',
+  variable: '--font-shantell-sans',
 });
 
 const playfair = Playfair_Display({ 
@@ -41,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`scroll-smooth ${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`scroll-smooth ${shantellSans.variable} ${playfair.variable}`}>
       <body className="min-h-screen bg-background antialiased">
         <SnowfallEffect />
         <Navigation />

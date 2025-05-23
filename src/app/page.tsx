@@ -3,6 +3,7 @@ import { CountdownSection } from "@/components/sections/CountdownSection";
 import { StorySection } from "@/components/sections/StorySection";
 import { DetailsSection } from "@/components/sections/DetailsSection";
 import { RSVPSection } from "@/components/sections/RSVPSection";
+import { GallerySection } from "@/components/sections/GallerySection";
 import { Navigation } from "@/components/Navigation";
 import { useWeddingStore } from '@/store/useWeddingStore';
 
@@ -28,6 +29,7 @@ export default async function Home({
       <CountdownSection />
       <StorySection />
       <DetailsSection />
+      <GallerySection />
       <RSVPSection />
     </main>
   );

@@ -19,21 +19,16 @@ export interface WeddingConfig {
   story: StorySection[];
   details: {
     dressCode: string;
-    accommodation: {
-      text: string;
-    };
     parking: {
       text: string;
     };
-  };
-  images: {
-    hero: string;
   };
   translations: {
     navigation: {
       home: string;
       ourStory: string;
       details: string;
+      gallery: string;
       rsvp: string;
     };
     hero: {
@@ -58,8 +53,14 @@ export interface WeddingConfig {
       receptionLabel: string;
       venueTitle: string;
       dressCodeTitle: string;
-      accommodationsTitle: string;
       parkingTitle: string;
+    };
+    gallery: {
+      title: string;
+    },
+    metadata: {
+      title: string;
+      description: string;
     };
   };
 }
@@ -68,5 +69,5 @@ interface StorySection {
   title: string;
   time: string;
   description: string;
-  image: string;
+  imagesPath: string;
 } 
