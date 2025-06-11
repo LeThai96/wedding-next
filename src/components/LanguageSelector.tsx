@@ -11,19 +11,7 @@ import {
 } from "@/components/ui/select";
 import "flag-icons/css/flag-icons.min.css";
 import { useWeddingStore } from '@/store/useWeddingStore';
-
-const languages = [
-  { 
-    code: 'en',
-    label: 'English',
-    flag: 'gb' // Use 'gb' for British flag
-  },
-  { 
-    code: 'vn',
-    label: 'Tiếng Việt',
-    flag: 'vn'
-  }
-];
+import { languages } from '@/config/languages';
 
 export function LanguageSelector() {
   const router = useRouter();
@@ -31,7 +19,7 @@ export function LanguageSelector() {
 
   useEffect(() => {
     // Get initial language from localStorage or default to 'en'
-    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+    const savedLang = localStorage.getItem('preferredLanguage') || 'vn';
     loadConfig(savedLang);
   }, [loadConfig]);
 
@@ -47,7 +35,7 @@ export function LanguageSelector() {
 
   return (
     <Select value={language} onValueChange={handleLanguageChange}>
-      <SelectTrigger className="w-[80px] bg-background/10 backdrop-blur-sm border-white/20 text-white">
+      <SelectTrigger className="w-[80px] bg-white border-white/20 text-white">
         <SelectValue>
           <span className={`fi fi-${getCurrentFlag()}`} />
         </SelectValue>

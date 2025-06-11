@@ -19,86 +19,86 @@
   "story": [
     {
       "title": "How We Met",
-      "time": "",
-      "description": "We met at a local coffee shop through mutual friends. It was love at first sight!",
+      "time": "09/2023",
+      "description": "The two were introduced just to go out for coffee for fun, but who would have thought...",
       "imagesPath": "/story/00-before-we-met"
     },
     {
       "title": "First trip with the matchmakers in Da Lat",
-      "time": "",
-      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "time": "10/2023",
+      "description": "Da Lat was misty, romantic… and cold. But even with freezing weather, we somehow found time to fall for each other between laughs, selfies, and bánh tráng nướng.",
       "imagesPath": "/story/01-first-trip-with-matchmaker"
     },
     {
       "title": "Our relationship started",
-      "time": "",
-      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "time": "10/2023",
+      "description": "She got a birthday cake. I got a girlfriend. Pretty fair deal, right?",
       "imagesPath": "/story/02-her-25th-birthday-starts-relationship"
     },
     {
       "title": "Going out together",
       "time": "",
-      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "description": "We practically became coffee shop explorers. If Saigon had a café crawl trophy, we'd already be champions.",
       "imagesPath": "/story/03-go-out-together"
     },
     {
       "title": "Christmas",
-      "time": "",
-      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "time": "12/2023",
+      "description": "Christmas lights, cheesy music, and us pretending not to laugh out loud at the park while holding hands. Totally worth it.",
       "imagesPath": "/story/04-christmas"
     },
     {
       "title": "Tet 2024",
-      "time": "",
-      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "time": "01/2024",
+      "description": "First Tết together = matching áo dài, awkward family intros, and compare who spends more on lucky money",
       "imagesPath": "/story/05-first-tet-2024"
     },
     {
       "title": "First private trip",
-      "time": "",
-      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "time": "02/2024",
+      "description": "Finally, no friends! Just us, the wind in Buôn Ma Thuột, and lots of random photos that didn't make it to public.",
       "imagesPath": "/story/06-first-private-trip"
     },
     {
       "title": "Our family moments",
-      "time": "",
-      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "time": "2024",
+      "description": "Birthdays turned into big family bonding days. Also, more food than we could ever finish.",
       "imagesPath": "/story/07-family-moments"
     },
     {
       "title": "Our birthdays",
-      "time": "",
-      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "time": "07/2024 - 10/2024",
+      "description": "Romantic restaurants, whispering wishes, and sneakily checking who gave the better gift.",
       "imagesPath": "/story/08-my-birthday"
     },
     {
       "title": "Going out, a lot",
-      "time": "",
-      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "time": "2024",
+      "description": "Cafés, food, road trips, music—we pretty much dated everywhere except ...the moon.",
       "imagesPath": "/story/09-going-out"
     },
     {
       "title": "Tet 2025",
-      "time": "",
-      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "time": "01/2025",
+      "description": "Wore ao dai and struck poses at Bến Thành like local celebs. Not saying we went viral, but...",
       "imagesPath": "/story/11-tet-2025"
     },
     {
       "title": "Thailand trip",
-      "time": "",
-      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "time": "03/2025",
+      "description": "Bangkok gave us chaos, Pattaya gave us peace. Both gave us unforgettable memories—and some hilarious food fails.",
       "imagesPath": "/story/12-thailand-trip"
     },
     {
       "title": "And then I proposed her",
-      "time": "",
-      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "time": "03/2025",
+      "description": "Fancy restaurant, retro vibes, and him nervously trying to open the ring box without dropping it. Spoiler: she said yes.",
       "imagesPath": "/story/13-proposal"
     },
     {
       "title": "Our Best wedding moments",
-      "time": "",
-      "description": "John proposed during our annual winter vacation, making it the most magical moment of our lives.",
+      "time": "05/2025",
+      "description": "We channeled our inner Hong Kong movie stars—80s vibes, drama stares, and outfits that screamed 'main character energy'.",
       "imagesPath": "/story/14-wedding"
     }
   ],
@@ -142,6 +142,15 @@
     },
     "gallery": {
       "title": "Our Gallery"
+    },
+    "celebrateUs": {
+      "title": "Celebrate Us 💕",
+      "presenceMessage": "Your presence at our wedding is the greatest gift we could ask for.",
+      "blessingsMessage": "For those who wish to express their blessings, we've provided our remittance information below. This is entirely optional and we are truly grateful for your love and support.",
+      "brideTitle": "Bride's Remittance",
+      "groomTitle": "Groom's Remittance",
+      "scanBride": "Scan to send gift to the bride",
+      "scanGroom": "Scan to send gift to the groom"
     },
     "metadata": {
       "title": "Thai & Ly's Wedding",

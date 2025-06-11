@@ -18,7 +18,6 @@ export function DetailsSection() {
             <div className="bg-card p-6 rounded-lg">
               <h3 className="text-xl font-playfair mb-4 text-foreground">{translations.details.ceremonyTitle}</h3>
               <p className="text-muted-foreground">{schedule.ceremony} - {translations.details.ceremonyLabel}</p>
-              <p className="text-muted-foreground">{schedule.cocktailHour} - {translations.details.cocktailHourLabel}</p>
               <p className="text-muted-foreground">{schedule.reception} - {translations.details.receptionLabel}</p>
             </div>
 

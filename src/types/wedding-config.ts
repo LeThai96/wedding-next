@@ -34,7 +34,6 @@ export interface WeddingConfig {
     };
     hero: {
       gettingMarried: string;
-      rsvpButton: string;
     };
     countdown: {
       title: string;
@@ -58,7 +57,16 @@ export interface WeddingConfig {
     };
     gallery: {
       title: string;
-    },
+    };
+    celebrateUs: {
+      title: string;
+      presenceMessage: string;
+      blessingsMessage: string;
+      brideTitle: string;
+      groomTitle: string;
+      scanBride: string;
+      scanGroom: string;
+    };
     metadata: {
       title: string;
       description: string;

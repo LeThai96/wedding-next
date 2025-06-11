@@ -1,0 +1,160 @@
+{
+  "couple": {
+    "person1": "Đình Thái",
+    "person2": "Tiểu Lý"
+  },
+  "event": {
+    "date": "2025-07-05",
+    "time": "18:00",
+    "venue": {
+      "name": "The Adora Center",
+      "address": "431 Hoàng Văn Thụ, P.4, Q.Tân Bình, TP.HCM"
+    }
+  },
+  "schedule": {
+    "ceremony": "18:00",
+    "cocktailHour": "19:00",
+    "reception": "19:00"
+  },
+  "story": [
+    {
+      "title": "Lần đầu gặp nhau",
+      "time": "09/2023",
+      "description": "Hai đứa được mai mối chỉ đi uống cà phê cho vui, còn không có ý định gặp lại, ai ngờ...",
+      "imagesPath": "/story/00-before-we-met"
+    },
+    {
+      "title": "Chuyến đi Đà Lạt cùng ông bà mai",
+      "time": "10/2023",
+      "description": "Đà Lạt thì lãng mạn, tụi mình thì rộn ràng náo nhiệt — vậy mà giữa tiếng cười và mùi bánh tráng nướng, hai đứa lại phải lòng nhau lúc nào không hay",
+      "imagesPath": "/story/01-first-trip-with-matchmaker"
+    },
+    {
+      "title": "Chính thức thành đôi",
+      "time": "10/2023",
+      "description": "Cổ được bánh kem, còn tôi thì được bạn gái. Qúa đã quá đã!",
+      "imagesPath": "/story/02-her-25th-birthday-starts-relationship"
+    },
+    {
+      "title": "Đi chơi với nhau hoài luôn",
+      "time": "",
+      "description": "Tuần nào tụi mình cũng lượn khắp Sài Gòn để khám phá những quán cà phê mới!",
+      "imagesPath": "/story/03-go-out-together"
+    },
+    {
+      "title": "Giáng Sinh đầu tiên",
+      "time": "12/2023",
+      "description": "Đèn lấp lánh, 2 đứa dắt nhau đi chơi xe điện đụng banh công viên. Trưởng thành dữ chưa?",
+      "imagesPath": "/story/04-christmas"
+    },
+    {
+      "title": "Tết 2024",
+      "time": "01/2024",
+      "description": "Tết đầu tiên bên nhau: lượn khắp phố chụp được vài pic ảnh rồi đi so coi đứa nào tốn tiền lì xì nhiều hơn!",
+      "imagesPath": "/story/05-first-tet-2024"
+    },
+    {
+      "title": "Chuyến đi riêng đầu tiên",
+      "time": "02/2024",
+      "description": "Cuối cùng cũng thoát khỏi 'hội bạn'. Chỉ còn hai đứa, có cái nắng cái gió của Buôn Mê và cả đống hình dìm hàng chưa dám up!",
+      "imagesPath": "/story/06-first-private-trip"
+    },
+    {
+      "title": "Những khoảnh khắc bên gia đình",
+      "time": "2024",
+      "description": "Sinh nhật ba mẹ lúc nào cũng là dịp cả nhà quây quần, cười nói rôm rả, vui hết biết!",
+      "imagesPath": "/story/07-family-moments"
+    },
+    {
+      "title": "Sinh nhật của tụi mình",
+      "time": "07/2024 - 10/2024",
+      "description": "Nhà hàng lãng mạn, thả thính ngọt xỉu, quà thì “đỉnh của chóp” 😊.",
+      "imagesPath": "/story/08-my-birthday"
+    },
+    {
+      "title": "Đi chơi, rất nhiều luôn!",
+      "time": "2024",
+      "description": "Cà phê, ăn uống, du lịch, nghe nhạc... tụi mình hẹn hò khắp nơi, trừ... chỗ ấy!",
+      "imagesPath": "/story/09-going-out"
+    },
+    {
+      "title": "Tết 2025",
+      "time": "01/2025",
+      "description": "Mặc áo dài, thong thả đạp xích lô giữa chợ Bến Thành, kệ phó nháy bấm máy lia lịa phía sau!",
+      "imagesPath": "/story/11-tet-2025"
+    },
+    {
+      "title": "Du lịch Thái Lan",
+      "time": "03/2025",
+      "description": "Bangkok thì náo nhiệt, Pattaya thì chill. Tụi mình thì lăn xả hết cỡ và thưởng thức nhiều món ăn thật ...không nói nên lời!",
+      "imagesPath": "/story/12-thailand-trip"
+    },
+    {
+      "title": "Và đã tới màn cầu hôn",
+      "time": "03/2025",
+      "description": "Nhà hàng Liên Xô, ánh đèn vàng mờ mờ, anh chàng run run mở hộp nhẫn. Cô ấy chỉ biết cười toe toét như được mùa! 🤣",
+      "imagesPath": "/story/13-proposal"
+    },
+    {
+      "title": "Ảnh cưới đỉnh cao",
+      "time": "05/2025",
+      "description": "Tụi mình như trở lại Hong Kong thập niên 80: tạo dáng thật “deep”, thần thái đầy cuốn hút, và tất nhiên, vẫn rất tình!",
+      "imagesPath": "/story/14-wedding"
+    }
+  ],
+  "details": {
+    "dressCode": "Trang phục sang - xịn - mịn",
+    "parking": {
+      "text": "Có chỗ đỗ xe rộng rãi tại sảnh, khỏi lo xếp xe nha!"
+    }
+  },
+  "translations": {
+    "navigation": {
+      "home": "Trang chủ",
+      "ourStory": "Chuyện tình tụi mình",
+      "details": "Thông tin cưới",
+      "gallery": "Album hình",
+      "celebrateUs": "Ăn mừng với tụi mình",
+      "title": "T & L"
+    },
+    "hero": {
+      "gettingMarried": "Sắp về chung một nhà!"
+    },
+    "countdown": {
+      "title": "Đếm ngược tới ngày tung hoa 🎉",
+      "days": "Ngày",
+      "hours": "Giờ",
+      "minutes": "Phút",
+      "seconds": "Giây"
+    },
+    "story": {
+      "title": "Câu chuyện tình yêu"
+    },
+    "details": {
+      "title": "Thông tin tiệc cưới",
+      "ceremonyTitle": "Lễ cưới",
+      "ceremonyLabel": "Đón khách",
+      "cocktailHourLabel": "Tiệc khai vị",
+      "receptionLabel": "Khai tiệc",
+      "venueTitle": "Địa điểm",
+      "dressCodeTitle": "Trang phục",
+      "parkingTitle": "Gửi xe"
+    },
+    "gallery": {
+      "title": "Khoảnh khắc yêu thương"
+    },
+    "celebrateUs": {
+      "title": "Chúc mừng dâu rể 💕",
+      "presenceMessage": "Sự hiện diện của bạn là món quà to bự nhất rồi 💕",
+      "blessingsMessage": "Nếu bạn muốn gửi chút yêu thương thì thông tin bên dưới để sẵn nè (hoàn toàn không bắt buộc nha, tụi mình cảm ơn thiệt nhiều vì tình cảm của bạn).",
+      "brideTitle": "Mừng cô dâu",
+      "groomTitle": "Mừng chú rể",
+      "scanBride": "Quét mã gửi quà cho cô dâu",
+      "scanGroom": "Quét mã gửi quà cho chú rể"
+    },
+    "metadata": {
+      "title": "Đám cưới của Đình Thái & Tiểu Lý",
+      "description": "Cùng tụi mình ăn mừng ngày đặc biệt nhé!"
+    }
+  }
+}

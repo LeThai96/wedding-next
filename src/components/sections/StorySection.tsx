@@ -21,6 +21,26 @@ export function StorySection() {
     loadAllStoryImages();
   }, [story, loadStoryImages]);
 
+  // Add scroll behavior control
+  useEffect(() => {
+    const storySection = document.getElementById('ourstory');
+    if (storySection) {
+      storySection.style.scrollBehavior = 'smooth';
+      storySection.style.scrollSnapType = 'y mandatory';
+      storySection.style.scrollSnapAlign = 'start';
+      storySection.style.scrollSnapStop = 'always';
+    }
+
+    return () => {
+      if (storySection) {
+        storySection.style.scrollBehavior = '';
+        storySection.style.scrollSnapType = '';
+        storySection.style.scrollSnapAlign = '';
+        storySection.style.scrollSnapStop = '';
+      }
+    };
+  }, []);
+
   const getImageLayoutClass = (images: typeof storyImages[string]) => {
     if (!images) return 'grid-cols-1';
     if (images.length === 1) {
@@ -79,7 +99,7 @@ export function StorySection() {
 
   if (isLoading) {
     return (
-      <section id="story" className="section-padding bg-muted">
+      <section id="ourstory" className="section-padding bg-muted">
         <div className="container-padding max-w-7xl mx-auto">
           <div className="flex justify-center items-center min-h-[50vh]">
             <p className="text-muted-foreground">Loading story...</p>
@@ -91,7 +111,7 @@ export function StorySection() {
 
   if (error) {
     return (
-      <section id="story" className="section-padding bg-muted">
+      <section id="ourstory" className="section-padding bg-muted">
         <div className="container-padding max-w-7xl mx-auto">
           <div className="flex justify-center items-center min-h-[50vh]">
             <p className="text-destructive">Error loading story: {error}</p>
@@ -102,7 +122,7 @@ export function StorySection() {
   }
 
   return (
-    <section id="story" className="section-padding bg-muted">
+    <section id="ourstory" className="section-padding bg-muted">
       <div className="container-padding max-w-7xl mx-auto">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
@@ -113,7 +133,7 @@ export function StorySection() {
         >
           {translations.story.title}
         </motion.h2>
-        <div className="space-y-24">
+        <div className="space-y-32">
           {story.map((section, index) => {
             const images = storyImages[section.imagesPath] || [];
             return (
@@ -121,7 +141,7 @@ export function StorySection() {
                 key={section.title}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true, margin: "-100px", amount: 0.3 }}
                 variants={containerVariants}
                 className={`grid md:grid-cols-3 gap-12 items-start ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
               >
