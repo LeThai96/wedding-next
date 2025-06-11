@@ -48,14 +48,6 @@ export function HeroSection() {
           <p className="mt-4">{event.venue.name}</p>
           <p>{event.venue.address}</p>
         </div>
-        <div className="pt-8">
-          <a 
-            href="#rsvp"
-            className="inline-block px-8 py-3 border-2 border-white rounded-full hover:bg-white hover:text-black transition-colors duration-300"
-          >
-            {translations.hero.rsvpButton}
-          </a>
-        </div>
       </div>
     </section>
   );

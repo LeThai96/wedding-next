@@ -1,5 +1,7 @@
 {
   "hero": "/hero-bg.jpg",
   "heroMobile": "/hero-bg-mobile.jpg",
-  "gallery": "/gallery"
+  "gallery": "/gallery",
+  "brideQr": "/qr-codes/bride-qr.jpg",
+  "groomQr": "/qr-codes/groom-qr.jpg"
 } 

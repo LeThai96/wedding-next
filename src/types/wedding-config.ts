@@ -29,7 +29,8 @@ export interface WeddingConfig {
       ourStory: string;
       details: string;
       gallery: string;
-      rsvp: string;
+      celebrateUs: string;
+      title: string;
     };
     hero: {
       gettingMarried: string;
