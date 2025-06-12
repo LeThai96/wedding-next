@@ -4,39 +4,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* @theme {
-  --color-primary: var;
-  --color-primary-foreground: #FFFFFF;
-  --color-secondary: #F0F1F3;
-  --color-secondary-foreground: #020817;
-  --color-accent: #6D7074;
-  --color-accent-foreground: #020817;
-  --color-background: #FAFAFB;
-  --color-foreground: #020817;
-  --color-card: #FFFFFF;
-  --color-card-foreground: #020817;
-  --color-popover: #FFFFFF;
-  --color-popover-foreground: #020817;
-  --color-muted: #F0F1F3;
-  --color-muted-foreground: #6D7074;
-  --color-destructive: #FF4C4C;
-  --color-destructive-foreground: #FFFFFF;
-  --color-border: #E0E0E0;
-  --color-input: #E0E0E0;
-  --color-ring: #E11D48;
-
-  --font-inter: "Inter, system-ui, sans-serif;";
-  --font-playfair: "Playfair, sans-serif;";
-  --font-parisienne: "Parisienne, sans-serif;";
-} */
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: #ffffff;
-    --background: #171717;
-  }
-} */
-
 @layer base {
   /* Light theme */
   :root {
@@ -117,18 +84,6 @@
     @apply bg-background text-foreground;
   }
 }
-
-/* @layer base {
-  html {
-    font-family: var(--font-inter), system-ui, sans-serif;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-playfair), serif;
-  }
-} */
-
-
 
 @theme {
   --radius-sm: calc(var(--radius) - 4px);

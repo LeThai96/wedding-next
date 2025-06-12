@@ -6,7 +6,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { CelebrateUsSection } from './sections/CelebrateUsSection';
+import { CelebrateUsDialogContent } from './sections/CelebrateUsDialogContent';
 import { useWeddingStore } from '@/store/useWeddingStore';
 
 export function CelebrateUsButton() {
@@ -22,15 +22,7 @@ export function CelebrateUsButton() {
           {translations.celebrateUs.title}
         </button>
       </DialogTrigger>
-      <DialogContent className="max-w-2xl bg-background/95 backdrop-blur-sm border-2 border-primary/20 rounded-2xl shadow-2xl">
-        <DialogTitle className="text-3xl font-playfair text-center mb-8 text-primary">
-          {translations.celebrateUs.title}
-        </DialogTitle>
-        <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent rounded-xl" />
-          <CelebrateUsSection />
-        </div>
-      </DialogContent>
+      <CelebrateUsDialogContent />
     </Dialog>
   );
 }

@@ -38,3 +38,4 @@ next-env.d.ts
 # story images
 /public/story/
 /public/gallery/
+/public/qr-codes/

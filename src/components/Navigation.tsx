@@ -3,6 +3,21 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useWeddingStore } from '@/store/useWeddingStore';
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { CelebrateUsDialogContent } from './sections/CelebrateUsDialogContent';
+
+type NavItem = {
+  key: string;
+  label: string;
+  href?: string;
+  onClick?: () => void;
+  isDialog?: boolean;
+};
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,6 +32,43 @@ export function Navigation() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const navItems: NavItem[] = [
+    { key: 'ourStory', label: translations.navigation.ourStory, href: '#story' },
+    { key: 'details', label: translations.navigation.details, href: '#details' },
+    { key: 'gallery', label: translations.navigation.gallery, href: '#gallery' },
+    { key: 'celebrateUs', label: translations.navigation.celebrateUs, isDialog: true },
+  ];
+
+  const renderNavItem = (item: NavItem) => {
+    const commonClasses = `cursor-pointer text-sm transition-colors duration-300 ${
+      isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'
+    }`;
+
+    if (item.isDialog) {
+      return (
+        <Dialog key={item.key}>
+          <DialogTrigger asChild>
+            <button className={commonClasses}>
+              {item.label}
+            </button>
+          </DialogTrigger>
+          <CelebrateUsDialogContent />
+        </Dialog>
+      );
+    }
+
+    return (
+      <Link
+        key={item.key}
+        href={item.href || '#'}
+        className={commonClasses}
+        onClick={item.onClick}
+      >
+        {item.label}
+      </Link>
+    );
+  };
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -33,19 +85,7 @@ export function Navigation() {
             {translations.navigation.title}
           </Link>
           <div className="hidden md:flex items-center space-x-8">
-            {Object.entries(translations.navigation)
-              .filter(([key]) => key !== 'title')
-              .map(([key, value]) => (
-                <Link
-                  key={key}
-                  href={`#${key.toLowerCase()}`}
-                  className={`text-sm transition-colors duration-300 ${
-                    isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'
-                  }`}
-                >
-                  {value}
-                </Link>
-              ))}
+            {navItems.map(renderNavItem)}
           </div>
         </div>
       </div>
