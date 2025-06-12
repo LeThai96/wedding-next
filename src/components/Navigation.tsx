@@ -82,7 +82,7 @@ export function Navigation() {
           >
             {translations.navigation.title}
           </Link>
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex md:mr-[84px] lg:mr-0 items-center space-x-8">
             {navItems.map(renderNavItem)}
           </div>
         </div>
