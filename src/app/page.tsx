@@ -10,7 +10,7 @@ import { useWeddingStore } from '@/store/useWeddingStore';
 export default async function Home({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
   // Initialize the store server-side with default language
   await useWeddingStore.getState().loadConfig('en');

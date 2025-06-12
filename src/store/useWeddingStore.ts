@@ -24,7 +24,7 @@ export const useWeddingStore = create<WeddingStore>((set) => ({
 
       const newConfig = await import(`@/config/wedding-details.${lang}.json`);
       set({ config: newConfig.default, language: lang });
-    } catch (error) {
+    } catch {
       console.warn(`Language ${lang} not found, falling back to English`);
       set({ config: defaultConfig, language: 'en' });
     }
