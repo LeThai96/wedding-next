@@ -7,6 +7,7 @@ import imageConfig from '@/config/image-config.json';
 import { CalendarDays, Clock, MapPin } from "lucide-react";
 import Link from "next/link";
 import { languages } from "@/config/languages";
+import { Suspense } from "react";
 
 export function HeroSection() {
   const { config, language } = useWeddingStore();
@@ -14,7 +15,7 @@ export function HeroSection() {
 
   const formatDate = (date: string) => {
     const dateObj = new Date(date);
-    
+
     const options: Intl.DateTimeFormatOptions = {
       weekday: 'long',
       month: 'long',
@@ -32,7 +33,9 @@ export function HeroSection() {
   return (
     <section id="home" className="relative w-full h-screen flex flex-col items-center justify-between py-20">
       <div className="absolute top-4 right-4 z-50">
-        <LanguageSelector />
+        <Suspense>
+          <LanguageSelector />
+        </Suspense>
       </div>
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/50 z-10" />

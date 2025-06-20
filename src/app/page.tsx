@@ -5,23 +5,8 @@ import { DetailsSection } from "@/components/sections/DetailsSection";
 import { GallerySection } from "@/components/sections/GallerySection";
 import { Navigation } from "@/components/Navigation";
 import { CelebrateUsButton } from "@/components/CelebrateUsButton";
-import { useWeddingStore } from '@/store/useWeddingStore';
 
-export default async function Home({
-  searchParams,
-}: {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
-}) {
-  // Initialize the store server-side with default language
-  await useWeddingStore.getState().loadConfig('en');
-
-  const { lang } = await searchParams;
-
-  // If there's a language parameter, load that configuration
-  if (lang && typeof lang === 'string') {
-    await useWeddingStore.getState().loadConfig(lang);
-  }
-
+export default async function Home() {
   return (
     <main className="min-h-screen">
       <Navigation />
